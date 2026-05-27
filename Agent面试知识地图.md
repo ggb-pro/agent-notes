@@ -2,12 +2,7 @@
 
 > 基于 86 篇 Agent 技术笔记的体系化整理，覆盖 Agent 理论、框架、工程化全链路。
 >
-> **三版笔记说明**：
-> - `speed-review/` — **速记版**（LLM 精简，每篇 3-4KB，1-2 分钟复习，推荐面试用）
-> - `optimized/` — **优化版**（格式化 Markdown，内容完整，适合深度学习）
-> - 原始 `.txt` — 原始笔记（未格式化）
->
-> 本文档为面试复习主线，建议直接用 `speed-review/` 目录的速记版。
+> 所有笔记位于 `speed-review/` 目录，每篇 3-4KB，1-2 分钟速记复习。点击下方链接直达。
 
 ---
 
@@ -122,12 +117,12 @@ Agent 面试知识体系
 
 ### Phase 1：基础打底（1-2 天）
 
-| 序号 | 主题 | 笔记文件 | 面试问法 |
-|------|------|----------|----------|
-| 1 | AI Agent 定义 | `什么是AI Agent？与传统软件程序有什么本质区别？` | "什么是AI Agent？和传统程序有什么区别？" |
-| 2 | LLM Agent 特点 | `基于大语言模型（LLM）的AI Agent有什么特点？` | "为什么现在大家都用LLM做Agent？" |
-| 3 | 工具使用 | `什么是工具使用AI Agent（Tool-using Agent）？工` | "Agent怎么使用外部工具？" |
-| 4 | 代码解释器 | `什么是代码解释器（Code Interpreter）？它在AI Age` | "代码解释器在Agent中起什么作用？" |
+| 序号 | 主题 | 笔记 | 面试问法 |
+|------|------|------|----------|
+| 1 | AI Agent 定义 | [什么是AI Agent？与传统软件程序有什么本质区别？](speed-review/什么是AI Agent？与传统软件程序有什么本质区别？.md) | "什么是AI Agent？和传统程序有什么区别？" |
+| 2 | LLM Agent 特点 | [基于大语言模型的AI Agent有什么特点？](speed-review/基于大语言模型（LLM）的AI Agent有什么特点？相比传统AI A.md) | "为什么现在大家都用LLM做Agent？" |
+| 3 | 工具使用 | [什么是工具使用AI Agent？](speed-review/什么是工具使用AI Agent（Tool-using Agent）？工.md) | "Agent怎么使用外部工具？" |
+| 4 | 代码解释器 | [什么是代码解释器？](speed-review/什么是代码解释器（Code Interpreter）？它在AI Age.md) | "代码解释器在Agent中起什么作用？" |
 
 **核心记忆点：**
 - Agent = 感知 + 决策 + 执行 的闭环，不是简单的 API 调用
@@ -139,16 +134,16 @@ Agent 面试知识体系
 
 ### Phase 2：核心推理模式（2-3 天，面试最高频）
 
-| 序号 | 主题 | 笔记文件 | 对比关系 |
-|------|------|----------|----------|
-| 5 | ReAct | `什么是ReAct模式？它如何提升AI Agent的推理能力？` | vs CoT: 闭卷→开卷 |
-| 6 | Plan-and-Execute | `什么是Plan-and-Execute模式？如何实现任务的分层规划？` | vs ReAct: 分层 vs 交替 |
-| 7 | ReWOO | `ReWOO（Reasoning WithOut Observation` | vs ReAct: 规划执行分离 |
-| 8 | Reflexion | `Reflexion机制如何工作？如何通过自我反思提升Agent性能？` | 基于失败轨迹反思 |
-| 9 | GoT | `Graph of Thoughts（GoT）如何表示复杂推理过程？有什` | vs CoT/ToT: DAG 结构 |
-| 10 | Self-Refinement | `Agent的Self-Refinement是如何实现的？需要哪些关键组` | Generator-Critic-Refiner |
-| 11 | Reflection | `如何设计Agent的反思（Reflection）机制？何时触发反思？` | 反思触发条件设计 |
-| 12 | Explore vs Exploit | `Agent的探索与利用（Exploration vs Exploita` | ε-greedy / UCB / Thompson |
+| 序号 | 主题 | 笔记 | 对比关系 |
+|------|------|------|----------|
+| 5 | ReAct | [什么是ReAct模式？](speed-review/什么是ReAct模式？它如何提升AI Agent的推理能力？.md) | vs CoT: 闭卷→开卷 |
+| 6 | Plan-and-Execute | [什么是Plan-and-Execute模式？](speed-review/什么是Plan-and-Execute模式？如何实现任务的分层规划？.md) | vs ReAct: 分层 vs 交替 |
+| 7 | ReWOO | [ReWOO](speed-review/ReWOO（Reasoning WithOut Observation.md) | vs ReAct: 规划执行分离 |
+| 8 | Reflexion | [Reflexion机制](speed-review/Reflexion机制如何工作？如何通过自我反思提升Agent性能？.md) | 基于失败轨迹反思 |
+| 9 | GoT | [Graph of Thoughts](speed-review/Graph of Thoughts（GoT）如何表示复杂推理过程？有什.md) | vs CoT/ToT: DAG 结构 |
+| 10 | Self-Refinement | [Self-Refinement](speed-review/Agent的Self-Refinement是如何实现的？需要哪些关键组.md) | Generator-Critic-Refiner |
+| 11 | Reflection | [反思机制设计](speed-review/如何设计Agent的反思（Reflection）机制？何时触发反思？.md) | 反思触发条件设计 |
+| 12 | Explore vs Exploit | [探索与利用](speed-review/Agent的探索与利用（Exploration vs Exploita.md) | ε-greedy / UCB / Thompson |
 
 **面试高频对比题速记：**
 
@@ -179,15 +174,15 @@ Reflexion vs Self-Refinement:
 
 ### Phase 3：记忆与规划（1-2 天）
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 13 | 记忆机制 | `AI Agent的记忆机制如何设计？短期记忆和长期记忆的区别？` |
-| 14 | 长期记忆持久化 | `Agent的长期记忆如何持久化？向量数据库的选择标准是什么？` |
-| 15 | 对话历史窗口 | `什么是对话历史窗口？保留多少轮对话合适？` |
-| 16 | 规划能力 | `AI Agent的规划能力是如何实现的？有哪些规划策略？` |
-| 17 | 动态重规划 | `Agent在执行过程中如何进行动态重规划？触发条件有哪些？` |
-| 18 | 元认知能力 | `Agent的元认知能力是什么？如何评估自身的能力边界？` |
-| 19 | 部分可观察 | `如何处理Agent的部分可观察问题？信息不完整时如何决策？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 13 | 记忆机制 | [AI Agent的记忆机制如何设计？](speed-review/AI Agent的记忆机制如何设计？短期记忆和长期记忆的区别？.md) |
+| 14 | 长期记忆持久化 | [长期记忆如何持久化？](speed-review/Agent的长期记忆如何持久化？向量数据库的选择标准是什么？.md) |
+| 15 | 对话历史窗口 | [什么是对话历史窗口？](speed-review/什么是对话历史窗口？保留多少轮对话合适？.md) |
+| 16 | 规划能力 | [Agent的规划能力](speed-review/AI Agent的规划能力是如何实现的？有哪些规划策略？.md) |
+| 17 | 动态重规划 | [动态重规划](speed-review/Agent在执行过程中如何进行动态重规划？触发条件有哪些？.md) |
+| 18 | 元认知能力 | [元认知能力](speed-review/Agent的元认知能力是什么？如何评估自身的能力边界？.md) |
+| 19 | 部分可观察 | [部分可观察问题](speed-review/如何处理Agent的部分可观察问题？信息不完整时如何决策？.md) |
 
 **核心记忆点：**
 - 短期记忆 = 上下文窗口内的对话/状态；长期记忆 = 向量数据库持久化
@@ -199,19 +194,19 @@ Reflexion vs Self-Refinement:
 
 ### Phase 4：Multi-Agent 系统（2-3 天，系统设计重点）
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 20 | MAS 基础 | `什么是多AI Agent系统（Multi-Agent System）？` |
-| 21 | Agent 通信 | `Agent之间如何进行有效通信？消息格式和协议如何定义？` |
-| 22 | 角色分工 | `Multi-Agent系统中的角色分工如何设计？有哪些典型角色模式？` |
-| 23 | 层级式架构 | `什么是层级式Multi-Agent架构？Manager-Worker模` |
-| 24 | 任务分配 | `如何设计Multi-Agent的任务分配算法？负载均衡如何实现？` |
-| 25 | 投票机制 | `Multi-Agent系统中的投票机制如何设计？如何聚合不同Agent` |
-| 26 | 一致性 | `Multi-Agent系统的一致性问题如何解决？共识算法如何应用？` |
-| 27 | 冲突解决 | `Agent协作中的冲突如何检测和解决？有哪些冲突解决策略？` |
-| 28 | 辩论模式 | `什么是Agent的辩论（Debate）模式？如何通过多Agent辩论提` |
-| 29 | 涌现行为 | `Multi-Agent系统的涌现行为（Emergent Behavio` |
-| 30 | 社会模拟 | `Agent社会模拟（Social Simulation）有什么应用？如` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 20 | MAS 基础 | [什么是Multi-Agent系统？](speed-review/什么是多AI Agent系统（Multi-Agent System）？.md) |
+| 21 | Agent 通信 | [Agent间通信](speed-review/Agent之间如何进行有效通信？消息格式和协议如何定义？.md) |
+| 22 | 角色分工 | [角色分工设计](speed-review/Multi-Agent系统中的角色分工如何设计？有哪些典型角色模式？.md) |
+| 23 | 层级式架构 | [层级式架构](speed-review/什么是层级式Multi-Agent架构？Manager-Worker模.md) |
+| 24 | 任务分配 | [任务分配算法](speed-review/如何设计Multi-Agent的任务分配算法？负载均衡如何实现？.md) |
+| 25 | 投票机制 | [投票机制](speed-review/Multi-Agent系统中的投票机制如何设计？如何聚合不同Agent.md) |
+| 26 | 一致性 | [一致性问题](speed-review/Multi-Agent系统的一致性问题如何解决？共识算法如何应用？.md) |
+| 27 | 冲突解决 | [冲突检测与解决](speed-review/Agent协作中的冲突如何检测和解决？有哪些冲突解决策略？.md) |
+| 28 | 辩论模式 | [辩论模式](speed-review/什么是Agent的辩论（Debate）模式？如何通过多Agent辩论提.md) |
+| 29 | 涌现行为 | [涌现行为](speed-review/Multi-Agent系统的涌现行为（Emergent Behavio.md) |
+| 30 | 社会模拟 | [社会模拟](speed-review/Agent社会模拟（Social Simulation）有什么应用？如.md) |
 
 **架构模式速记：**
 
@@ -239,44 +234,44 @@ Reflexion vs Self-Refinement:
 
 #### LangChain 核心
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 31 | LangChain 是什么 | `LangChain是什么？它解决了LLM应用开发的哪些问题？` |
-| 32 | 核心组件 | `LangChain的核心组件有哪些？各自的作用是什么？` |
-| 33 | Agent 执行器 | `LangChain的Agent执行器是如何工作的？` |
-| 34 | LCEL | `什么是LCEL（LangChain Expression Langua` |
-| 35 | Memory 组件 | `LangChain的Memory组件如何工作？有哪些Memory类型？` |
-| 36 | 缓存机制 | `LangChain的缓存机制如何工作？如何优化性能？` |
-| 37 | 输出解析器 | `LangChain的输出解析器有什么作用？如何处理结构化输出？` |
-| 38 | 文档处理 | `LangChain的文档处理功能包括哪些？如何处理大文档？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 31 | LangChain 是什么 | [LangChain是什么？](speed-review/LangChain是什么？它解决了LLM应用开发的哪些问题？.md) |
+| 32 | 核心组件 | [核心组件](speed-review/LangChain的核心组件有哪些？各自的作用是什么？.md) |
+| 33 | Agent 执行器 | [Agent执行器](speed-review/LangChain的Agent执行器是如何工作的？.md) |
+| 34 | LCEL | [LCEL](speed-review/什么是LCEL（LangChain Expression Langua.md) |
+| 35 | Memory 组件 | [Memory组件](speed-review/LangChain的Memory组件如何工作？有哪些Memory类型？.md) |
+| 36 | 缓存机制 | [缓存机制](speed-review/LangChain的缓存机制如何工作？如何优化性能？.md) |
+| 37 | 输出解析器 | [输出解析器](speed-review/LangChain的输出解析器有什么作用？如何处理结构化输出？.md) |
+| 38 | 文档处理 | [文档处理](speed-review/LangChain的文档处理功能包括哪些？如何处理大文档？.md) |
 
 #### LangChain 实战
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 39 | RAG 实现 | `如何在LangChain中实现RAG（检索增强生成）？` |
-| 40 | 流式输出 | `如何在LangChain中实现流式输出？有什么应用场景？` |
-| 41 | 工具集成 | `如何在LangChain中集成外部工具？Tool的定义规范是什么？` |
-| 42 | 多轮对话 | `如何使用LangChain构建多轮对话系统？` |
-| 43 | 问答机器人 | `如何用LangChain实现一个简单的问答机器人Agent？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 39 | RAG 实现 | [RAG实现](speed-review/如何在LangChain中实现RAG（检索增强生成）？.md) |
+| 40 | 流式输出 | [流式输出](speed-review/如何在LangChain中实现流式输出？有什么应用场景？.md) |
+| 41 | 工具集成 | [工具集成](speed-review/如何在LangChain中集成外部工具？Tool的定义规范是什么？.md) |
+| 42 | 多轮对话 | [多轮对话](speed-review/如何使用LangChain构建多轮对话系统？.md) |
+| 43 | 问答机器人 | [问答机器人](speed-review/如何用LangChain实现一个简单的问答机器人Agent？.md) |
 
 #### LangGraph
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 44 | LangGraph 基础 | `LangGraph是什么？它与LangChain有什么关系？` |
-| 45 | 核心概念 | `LangGraph的核心概念有哪些？图、节点、边的作用是什么？` |
-| 46 | 条件边 | `LangGraph的条件边（Conditional Edge）如何使用` |
-| 47 | 状态管理 | `如何在LangGraph中定义状态？状态管理的最佳实践？` |
-| 48 | 编译执行 | `LangGraph的编译和执行过程是怎样的？` |
-| 49 | 循环迭代 | `如何在LangGraph中实现循环和迭代？` |
-| 50 | 并行执行 | `如何在LangGraph中处理并行执行？` |
-| 51 | 持久化 | `LangGraph的持久化机制是什么？如何保存执行状态？` |
-| 52 | 人机交互 | `LangGraph的人机交互功能如何实现？` |
-| 53 | 超时控制 | `如何在LangGraph中实现超时控制？` |
-| 54 | 错误处理 | `LangGraph中如何处理错误和异常？` |
-| 55 | 调试 | `如何调试LangGraph工作流？有哪些调试工具？` |
-| 56 | 数据分析实战 | `如何用LangGraph实现一个多步骤的数据分析流程？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 44 | LangGraph 基础 | [LangGraph是什么？](speed-review/LangGraph是什么？它与LangChain有什么关系？.md) |
+| 45 | 核心概念 | [核心概念](speed-review/LangGraph的核心概念有哪些？图、节点、边的作用是什么？.md) |
+| 46 | 条件边 | [条件边](speed-review/LangGraph的条件边（Conditional Edge）如何使用.md) |
+| 47 | 状态管理 | [状态管理](speed-review/如何在LangGraph中定义状态？状态管理的最佳实践？.md) |
+| 48 | 编译执行 | [编译执行](speed-review/LangGraph的编译和执行过程是怎样的？.md) |
+| 49 | 循环迭代 | [循环和迭代](speed-review/如何在LangGraph中实现循环和迭代？.md) |
+| 50 | 并行执行 | [并行执行](speed-review/如何在LangGraph中处理并行执行？.md) |
+| 51 | 持久化 | [持久化机制](speed-review/LangGraph的持久化机制是什么？如何保存执行状态？.md) |
+| 52 | 人机交互 | [人机交互](speed-review/LangGraph的人机交互功能如何实现？.md) |
+| 53 | 超时控制 | [超时控制](speed-review/如何在LangGraph中实现超时控制？.md) |
+| 54 | 错误处理 | [错误和异常](speed-review/LangGraph中如何处理错误和异常？.md) |
+| 55 | 调试 | [调试工具](speed-review/如何调试LangGraph工作流？有哪些调试工具？.md) |
+| 56 | 数据分析实战 | [数据分析流程](speed-review/如何用LangGraph实现一个多步骤的数据分析流程？.md) |
 
 **LangChain vs LangGraph 选型指南：**
 - 简单链式调用（文档摘要、翻译）→ LangChain
@@ -287,14 +282,14 @@ Reflexion vs Self-Refinement:
 
 ### Phase 6：MCP 协议（0.5 天，加分项）
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 57 | MCP 概述 | `什么是MCP(Model Context Protocol)协议？它解` |
-| 58 | MCP 架构 | `MCP(Model Context Protocol)协议的基本架构是` |
-| 59 | MCP Resource | `MCP(Model Context Protocol)协议中的Reso` |
-| 60 | MCP 传输 | `MCP(Model Context Protocol)协议支持哪些传输` |
-| 61 | MCP 安全 | `MCP(Model Context Protocol)协议的安全机制包` |
-| 62 | MCP 开发 | `如何使用MCP(Model Context Protocol)协议开发` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 57 | MCP 概述 | [MCP是什么？](speed-review/什么是MCP(Model Context Protocol)协议？它解.md) |
+| 58 | MCP 架构 | [基本架构](speed-review/MCP(Model Context Protocol)协议的基本架构是.md) |
+| 59 | MCP Resource | [Resource管理](speed-review/MCP(Model Context Protocol)协议中的Reso.md) |
+| 60 | MCP 传输 | [传输方式](speed-review/MCP(Model Context Protocol)协议支持哪些传输.md) |
+| 61 | MCP 安全 | [安全机制](speed-review/MCP(Model Context Protocol)协议的安全机制包.md) |
+| 62 | MCP 开发 | [MCP开发实战](speed-review/如何使用MCP(Model Context Protocol)协议开发.md) |
 
 **核心记忆点：**
 - MCP = Anthropic 推出的 LLM 与外部系统连接的标准化协议
@@ -309,41 +304,41 @@ Reflexion vs Self-Refinement:
 
 #### 评测
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 63 | 性能评估 | `如何评估AI Agent的性能？有哪些关键指标？` |
-| 64 | 响应质量 | `如何评估和改进AI Agent的响应质量？` |
-| 65 | AgentBench | `AgentBench评测框架包含哪些维度？如何设计Agent的benc` |
-| 66 | WebArena | `WebArena评测任务的特点是什么？如何评估Agent的网页操作能力` |
-| 67 | AutoGPT / BabyAGI | `AutoGPT的工作原理是什么？` + `BabyAGI与AutoGPT有什么区别？` |
-| 68 | 测试用例 | `如何构建Agent的测试用例库？单元测试和集成测试如何设计？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 63 | 性能评估 | [性能评估指标](speed-review/如何评估AI Agent的性能？有哪些关键指标？.md) |
+| 64 | 响应质量 | [响应质量评估](speed-review/如何评估和改进AI Agent的响应质量？.md) |
+| 65 | AgentBench | [AgentBench评测](speed-review/AgentBench评测框架包含哪些维度？如何设计Agent的benc.md) |
+| 66 | WebArena | [WebArena评测](speed-review/WebArena评测任务的特点是什么？如何评估Agent的网页操作能力.md) |
+| 67 | AutoGPT / BabyAGI | [AutoGPT](speed-review/AutoGPT的工作原理是什么？它如何实现自主任务执行？.md) / [BabyAGI](speed-review/BabyAGI与AutoGPT有什么区别？各自的优缺点是什么？.md) |
+| 68 | 测试用例 | [测试用例库](speed-review/如何构建Agent的测试用例库？单元测试和集成测试如何设计？.md) |
 
 #### 生产工程化
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 69 | 错误处理 | `AI Agent在执行过程中可能遇到哪些错误？如何处理？` |
-| 70 | 调试方法 | `AI Agent开发中常见的调试问题有哪些？如何解决？` |
-| 71 | 容错设计 | `Agent对话模块的容错能力怎么设计？用户说话不清楚或有歧义时怎么办？` |
-| 72 | 降级策略 | `如何设计Agent的降级策略？在模型不可用时如何保证服务？` |
-| 73 | 成本控制 | `Agent的成本如何计算？如何在效果和成本间找到最优平衡点？` |
-| 74 | 监控指标 | `Agent系统的监控指标有哪些？如何实时追踪Agent的执行状态？` |
-| 75 | 提示词优化 | `生产环境中Agent的提示词如何迭代优化？A_B测试如何设计？` |
-| 76 | Agentic Workflow | `什么是Agentic Workflow？与传统工作流有什么区别？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 69 | 错误处理 | [错误处理](speed-review/AI Agent在执行过程中可能遇到哪些错误？如何处理？.md) |
+| 70 | 调试方法 | [调试问题](speed-review/AI Agent开发中常见的调试问题有哪些？如何解决？.md) |
+| 71 | 容错设计 | [容错设计](speed-review/Agent对话模块的容错能力怎么设计？用户说话不清楚或有歧义时怎么办？.md) |
+| 72 | 降级策略 | [降级策略](speed-review/如何设计Agent的降级策级？在模型不可用时如何保证服务？.md) |
+| 73 | 成本控制 | [成本计算与平衡](speed-review/Agent的成本如何计算？如何在效果和成本间找到最优平衡点？.md) |
+| 74 | 监控指标 | [监控指标](speed-review/Agent系统的监控指标有哪些？如何实时追踪Agent的执行状态？.md) |
+| 75 | 提示词优化 | [提示词优化](speed-review/生产环境中Agent的提示词如何迭代优化？A_B测试如何设计？.md) |
+| 76 | Agentic Workflow | [Agentic Workflow](speed-review/什么是Agentic Workflow？与传统工作流有什么区别？.md) |
 
 #### 安全与可信
 
-| 序号 | 主题 | 笔记文件 |
-|------|------|----------|
-| 77 | 可解释性 | `AI Agent的可解释性如何实现？为什么重要？` |
-| 78 | 安全性 | `AI Agent的安全性问题有哪些？如何防范恶意行为？` |
-| 79 | 可控性权衡 | `Agent的可解释性与可控性如何权衡？如何在自主性和安全性间平衡？` |
-| 80 | 幻觉问题 | `AI Agent的幻觉问题如何解决？有哪些验证策略？` |
-| 81 | 失败分析 | `Agent失败案例如何分析？常见的失败模式有哪些？` |
-| 82 | 工具学习 | `什么是Agent的工具学习（Tool Learning）？如何让Age` |
-| 83 | 网络搜索 | `如何给AI Agent添加网络搜索功能？需要注意什么？` |
-| 84 | 文件处理 | `实现一个文件处理AI Agent需要考虑哪些技术点？` |
-| 85 | NLG 策略 | `自然语言生成（NLG）在对话里怎么用？模板、检索、生成各有什么优缺点？` |
+| 序号 | 主题 | 笔记 |
+|------|------|------|
+| 77 | 可解释性 | [可解释性](speed-review/AI Agent的可解释性如何实现？为什么重要？.md) |
+| 78 | 安全性 | [安全性](speed-review/AI Agent的安全性问题有哪些？如何防范恶意行为？.md) |
+| 79 | 可控性权衡 | [可控性权衡](speed-review/Agent的可解释性与可控性如何权衡？如何在自主性和安全性间平衡？.md) |
+| 80 | 幻觉问题 | [幻觉问题](speed-review/AI Agent的幻觉问题如何解决？有哪些验证策略？.md) |
+| 81 | 失败分析 | [失败案例分析](speed-review/Agent失败案例如何分析？常见的失败模式有哪些？.md) |
+| 82 | 工具学习 | [工具学习](speed-review/什么是Agent的工具学习（Tool Learning）？如何让Age.md) |
+| 83 | 网络搜索 | [网络搜索](speed-review/如何给AI Agent添加网络搜索功能？需要注意什么？.md) |
+| 84 | 文件处理 | [文件处理Agent](speed-review/实现一个文件处理AI Agent需要考虑哪些技术点？.md) |
+| 85 | NLG 策略 | [NLG策略](speed-review/自然语言生成（NLG）在对话里怎么用？模板、检索、生成各有什么优缺点？.md) |
 
 ---
 
@@ -353,36 +348,36 @@ Reflexion vs Self-Refinement:
 
 | # | 题目 | 关键答法 | 对应笔记 |
 |---|------|----------|----------|
-| 1 | **什么是 AI Agent？和传统程序有什么区别？** | 感知-决策-执行闭环 vs 输入-处理-输出线性；概率性推理 vs 确定性执行 | 基础概念 #1 |
-| 2 | **ReAct 模式是什么？和 CoT 有什么区别？** | Reasoning+Acting 交替；CoT 闭卷→ReAct 开卷；思考-行动-观察循环 | 推理模式 #5 |
-| 3 | **Agent 的记忆机制怎么设计？** | 短期记忆（上下文窗口）+ 长期记忆（向量数据库）；对话窗口策略 | 记忆系统 #13 |
-| 4 | **Multi-Agent 系统怎么设计？** | 层级/扁平/混合架构；角色分工；通信协议；冲突解决 | MAS #20-30 |
-| 5 | **LangChain 和 LangGraph 有什么区别？** | LangChain = 任务执行链；LangGraph = 状态编排图；简单用前者，复杂用后者 | 框架 #31,44 |
+| 1 | **什么是 AI Agent？和传统程序有什么区别？** | 感知-决策-执行闭环 vs 输入-处理-输出线性；概率性推理 vs 确定性执行 | [基础概念 #1](speed-review/什么是AI Agent？与传统软件程序有什么本质区别？.md) |
+| 2 | **ReAct 模式是什么？和 CoT 有什么区别？** | Reasoning+Acting 交替；CoT 闭卷→ReAct 开卷；思考-行动-观察循环 | [推理模式 #5](speed-review/什么是ReAct模式？它如何提升AI Agent的推理能力？.md) |
+| 3 | **Agent 的记忆机制怎么设计？** | 短期记忆（上下文窗口）+ 长期记忆（向量数据库）；对话窗口策略 | [记忆 #13](speed-review/AI Agent的记忆机制如何设计？短期记忆和长期记忆的区别？.md) |
+| 4 | **Multi-Agent 系统怎么设计？** | 层级/扁平/混合架构；角色分工；通信协议；冲突解决 | [MAS #20](speed-review/什么是多AI Agent系统（Multi-Agent System）？.md) |
+| 5 | **LangChain 和 LangGraph 有什么区别？** | LangChain = 任务执行链；LangGraph = 状态编排图；简单用前者，复杂用后者 | [框架 #31](speed-review/LangChain是什么？它解决了LLM应用开发的哪些问题？.md) / [#44](speed-review/LangGraph是什么？它与LangChain有什么关系？.md) |
 
 ### 第二梯队：高频出现
 
 | # | 题目 | 关键答法 | 对应笔记 |
 |---|------|----------|----------|
-| 6 | **Agent 怎么调用外部工具？** | Tool 描述 + 参数 schema + 结果解析；Function Calling | 基础 #3 |
-| 7 | **Agent 的幻觉问题怎么解决？** | RAG 增强、结果验证、Self-Consistency、多 Agent 交叉验证 | 安全 #80 |
-| 8 | **如何评估 Agent 性能？** | 任务完成率、响应时间、Token 成本、准确率/F1；AgentBench/WebArena | 评测 #63-66 |
-| 9 | **Agent 的安全性怎么保障？** | Prompt 注入防护、最小权限、沙盒、审计日志、人工审核 | 安全 #78 |
-| 10 | **如何做 Agent 的错误处理和降级？** | 重试 + 回退 + 降级到规则引擎 + 人工接管 | 工程 #69,72 |
+| 6 | **Agent 怎么调用外部工具？** | Tool 描述 + 参数 schema + 结果解析；Function Calling | [基础 #3](speed-review/什么是工具使用AI Agent（Tool-using Agent）？工.md) |
+| 7 | **Agent 的幻觉问题怎么解决？** | RAG 增强、结果验证、Self-Consistency、多 Agent 交叉验证 | [安全 #80](speed-review/AI Agent的幻觉问题如何解决？有哪些验证策略？.md) |
+| 8 | **如何评估 Agent 性能？** | 任务完成率、响应时间、Token 成本、准确率/F1；AgentBench/WebArena | [评测 #63](speed-review/如何评估AI Agent的性能？有哪些关键指标？.md) |
+| 9 | **Agent 的安全性怎么保障？** | Prompt 注入防护、最小权限、沙盒、审计日志、人工审核 | [安全 #78](speed-review/AI Agent的安全性问题有哪些？如何防范恶意行为？.md) |
+| 10 | **如何做 Agent 的错误处理和降级？** | 重试 + 回退 + 降级到规则引擎 + 人工接管 | [工程 #69](speed-review/AI Agent在执行过程中可能遇到哪些错误？如何处理？.md) / [#72](speed-review/如何设计Agent的降级策级？在模型不可用时如何保证服务？.md) |
 
 ### 第三梯队：常作追问
 
 | # | 题目 | 关键答法 | 对应笔记 |
 |---|------|----------|----------|
-| 11 | **Plan-and-Execute vs ReAct？** | 前者先规划再执行适合结构化任务；后者交替更灵活 | 推理 #6 |
-| 12 | **什么是 Agentic Workflow？** | Agent 自主规划步骤、选工具、评估结果 vs 传统预定义流程 | 工程 #76 |
-| 13 | **MCP 协议是什么？** | Anthropic 的 LLM-外部系统连接标准；Client-Server + JSON-RPC | MCP #57 |
-| 14 | **Agent 间怎么通信？** | 消息总线 / 直接调用；结构化消息格式（JSON Schema）；同步/异步 | MAS #21 |
-| 15 | **涌现行为是什么？如何利用？** | 整体>部分之和；监控+引导+抑制；有益强化、有害熔断 | MAS #29 |
-| 16 | **Reflexion 和 Self-Refinement 区别？** | Reflexion 跨轮次记忆反思；Self-Refinement 同轮次内迭代 | 推理 #8,10 |
-| 17 | **如何控制 Agent 成本？** | Token 计费模型、缓存、降级小模型、批量处理、Prompt 精简 | 工程 #73 |
-| 18 | **Agent 的可解释性怎么做？** | 推理链可视化、决策日志、注意力分析、CoT 路径追踪 | 安全 #77 |
-| 19 | **如何设计 Agent 的监控？** | 分层：Agent 级（延迟/错误率）、交互级（消息频率）、系统级（吞吐/成功率） | 工程 #74 |
-| 20 | **Agent 测试怎么做？** | 单元测试（工具/组件）+ 集成测试（端到端流程）+ 回归测试 | 评测 #68 |
+| 11 | **Plan-and-Execute vs ReAct？** | 前者先规划再执行适合结构化任务；后者交替更灵活 | [推理 #6](speed-review/什么是Plan-and-Execute模式？如何实现任务的分层规划？.md) |
+| 12 | **什么是 Agentic Workflow？** | Agent 自主规划步骤、选工具、评估结果 vs 传统预定义流程 | [工程 #76](speed-review/什么是Agentic Workflow？与传统工作流有什么区别？.md) |
+| 13 | **MCP 协议是什么？** | Anthropic 的 LLM-外部系统连接标准；Client-Server + JSON-RPC | [MCP #57](speed-review/什么是MCP(Model Context Protocol)协议？它解.md) |
+| 14 | **Agent 间怎么通信？** | 消息总线 / 直接调用；结构化消息格式（JSON Schema）；同步/异步 | [MAS #21](speed-review/Agent之间如何进行有效通信？消息格式和协议如何定义？.md) |
+| 15 | **涌现行为是什么？如何利用？** | 整体>部分之和；监控+引导+抑制；有益强化、有害熔断 | [MAS #29](speed-review/Multi-Agent系统的涌现行为（Emergent Behavio.md) |
+| 16 | **Reflexion 和 Self-Refinement 区别？** | Reflexion 跨轮次记忆反思；Self-Refinement 同轮次内迭代 | [#8](speed-review/Reflexion机制如何工作？如何通过自我反思提升Agent性能？.md) / [#10](speed-review/Agent的Self-Refinement是如何实现的？需要哪些关键组.md) |
+| 17 | **如何控制 Agent 成本？** | Token 计费模型、缓存、降级小模型、批量处理、Prompt 精简 | [工程 #73](speed-review/Agent的成本如何计算？如何在效果和成本间找到最优平衡点？.md) |
+| 18 | **Agent 的可解释性怎么做？** | 推理链可视化、决策日志、注意力分析、CoT 路径追踪 | [安全 #77](speed-review/AI Agent的可解释性如何实现？为什么重要？.md) |
+| 19 | **如何设计 Agent 的监控？** | 分层：Agent 级（延迟/错误率）、交互级（消息频率）、系统级（吞吐/成功率） | [工程 #74](speed-review/Agent系统的监控指标有哪些？如何实时追踪Agent的执行状态？.md) |
+| 20 | **Agent 测试怎么做？** | 单元测试（工具/组件）+ 集成测试（端到端流程）+ 回归测试 | [评测 #68](speed-review/如何构建Agent的测试用例库？单元测试和集成测试如何设计？.md) |
 
 ---
 
@@ -462,7 +457,7 @@ Reflexion vs Self-Refinement:
 |---|---|---|---|---|---|---|---|
 | **ReAct** | - | 观察结果需记忆 | 行动=调用工具 | LangGraph 实现循环 | 多 Agent 各自 ReAct | 工具调用需安全检查 | 循环次数影响成本 |
 | **记忆** | 观察需存储 | - | 长期记忆靠向量DB | 状态=全局记忆 | 共享记忆 vs 私有记忆 | 记忆可能泄露敏感信息 | 记忆检索准确率 |
-| **工具** | ReAct 调用工具 | 工具结果存记忆 | - | 节点=工具执行 | 工具分配给专门Agent | 工具权限控制 | 工具调用成功率 |
+| **工具** | ReAct 调用工具 | 工具结果存记忆 | - | 节点封装工具 | 工具分配给专门Agent | 工具权限控制 | 工具调用成功率 |
 | **LangGraph** | 循环实现ReAct | 状态持久化 | 节点封装工具 | - | 多子图=多Agent | 人机交互做审核 | 执行追踪 |
 | **Multi-Agent** | 各Agent可ReAct | 共享/独立记忆 | Agent专精不同工具 | 子图编排 | - | Agent间权限隔离 | 集体效率指标 |
 | **安全** | 防Prompt注入 | 数据脱敏 | 工具沙盒 | 审批节点 | 防有害涌现 | - | 红队测试 |
